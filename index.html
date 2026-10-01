@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paço do Frevo | Museu da Cultura</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8ef;
+    color: #29212a;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: #8b1538;
+    color: white;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffd447;
+}
+
+header p {
+    font-size: 13px;
+    color: #ffe6d8;
+}
+
+/* Navegação */
+nav {
+    background-color: #571027;
+    padding: 14px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd447;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(120deg, #9d174d, #e34a32, #f59e0b);
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.banner a {
+    display: inline-block;
+    background: #ffd447;
+    color: #571027;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.banner a:hover {
+    background: white;
+}
+
+/* Layout principal */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+/* Conteúdo */
+main {
+    flex: 3;
+    min-width: 0;
+}
+
+section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px #57102712;
+}
+
+h2 {
+    color: #8b1538;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #f5b82e;
+    padding-bottom: 8px;
+}
+
+section p {
+    margin-bottom: 12px;
+}
+
+/* Cartões */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1 1 180px;
+    background: #fff4e7;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+
+.card:nth-child(1) .card-img {
+    background: #f9c74f;
+}
+
+.card:nth-child(2) .card-img {
+    background: #f9844a;
+}
+
+.card:nth-child(3) .card-img {
+    background: #90be6d;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card h3 {
+    color: #8b1538;
+    margin-bottom: 8px;
+}
+
+/* Barra lateral */
+aside {
+    flex: 1;
+    min-width: 230px;
+    background: #ffedcf;
+    padding: 22px;
+    border-radius: 12px;
+    border-top: 5px solid #e34a32;
+}
+
+aside h2 {
+    font-size: 21px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e6cba5;
+}
+
+aside a {
+    color: #7d1938;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+aside a:hover {
+    color: #e34a32;
+}
+
+.horario {
+    background: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
+    background: #571027;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h3 {
+    color: #ffd447;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #ffd447;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 750px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 5px 9px;
+    }
+
+    .banner h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    main, aside {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Cabeçalho -->
+<header>
+    <div>
+        <div class="logo">🎭 PAÇO <span>DO FREVO</span></div>
+        <p>Um espaço de cultura, dança e tradição</p>
+    </div>
+    <div>📍 Recife - Pernambuco</div>
+</header>
+
+<!-- Menu -->
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#museu">O Museu</a>
+    <a href="#cultura">Cultura</a>
+    <a href="#visite">Visitação</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<!-- Banner -->
+<div class="banner" id="inicio">
+    <h1>Viva a magia do Frevo!</h1>
+    <p>
+        Descubra a história, as cores, a música e a alegria
+        de uma das maiores expressões culturais de Pernambuco.
+    </p>
+    <a href="#museu">Conheça o Museu</a>
+</div>
+
+<!-- Conteúdo e barra lateral -->
+<div class="container">
+
+    <main>
+        <section id="museu">
+            <h2>🏛️ Sobre o Museu</h2>
+            <p>
+                O Paço do Frevo é um espaço dedicado à preservação,
+                pesquisa e divulgação do frevo, uma manifestação
+                cultural que representa a identidade pernambucana.
+            </p>
+            <p>
+                Localizado no Recife, o museu celebra a música,
+                a dança e a história do carnaval, aproximando
+                visitantes de uma tradição cheia de energia.
+            </p>
+        </section>
+
+        <section id="cultura">
+            <h2>🎉 Explore Nossa Cultura</h2>
+            <p>
+                Conheça alguns dos elementos que fazem parte
+                da riqueza cultural do frevo.
+            </p>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-img">💃</div>
+                    <div class="card-content">
+                        <h3>A Dança</h3>
+                        <p>
+                            Movimentos acrobáticos e passos
+                            que dão vida ao ritmo do frevo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">🎺</div>
+                    <div class="card-content">
+                        <h3>A Música</h3>
+                        <p>
+                            Os metais e os ritmos vibrantes
+                            que animam o carnaval.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">☂️</div>
+                    <div class="card-content">
+                        <h3>A Sombrinha</h3>
+                        <p>
+                            Um símbolo colorido que acompanha
+                            os dançarinos de frevo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="visite">
+            <h2>📸 Uma Experiência Cultural</h2>
+            <p>
+                No museu, os visitantes podem conhecer exposições,
+                descobrir curiosidades sobre o frevo e explorar
+                a história dessa expressão artística.
+            </p>
+            <p>
+                Uma oportunidade para aprender, apreciar a arte
+                e valorizar a cultura de Pernambuco.
+            </p>
+        </section>
+    </main>
+
+    <!-- Barra lateral -->
+    <aside>
+        <h2>📌 Explore</h2>
+        <ul>
+            <li><a href="#museu">Sobre o museu</a></li>
+            <li><a href="#cultura">Nossa cultura</a></li>
+            <li><a href="#visite">Exposições</a></li>
+            <li><a href="#contato">Informações</a></li>
+        </ul>
+
+        <div class="horario">
+            <h3>🕒 Planeje sua visita</h3>
+            <p>
+                Consulte os horários, os ingressos
+                e as informações atualizadas nos
+                canais oficiais do museu.
+            </p>
+        </div>
+
+        <div class="horario">
+            <h3>📍 Localização</h3>
+            <p>Recife Antigo</p>
+            <p>Recife - PE, Brasil</p>
+        </div>
+    </aside>
+
+</div>
+
+<!-- Rodapé -->
+<footer id="contato">
+    <h3>🎭 Paço do Frevo</h3>
+    <p>Celebrando a cultura e a tradição pernambucana.</p>
+
+    <p>
+        <a href="#inicio">Início</a> |
+        <a href="#museu">Museu</a> |
+        <a href="#cultura">Cultura</a>
+    </p>
+
+    <p>© 2026 - Projeto educacional de HTML e CSS.</p>
+    <p>Desenvolvido para fins escolares 💜</p>
+</footer>
+
+</body>
+</html>
